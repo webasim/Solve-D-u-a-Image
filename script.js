@@ -14,14 +14,13 @@ let moveCount = 0;
 let timer = 0;
 let timerInterval;
 
-const defaultImageSrc = 'default.jpg'; // Default image URL
+const defaultImageSrc = 'default.jpg'; 
 
 function loadDefaultImage() {
     img.src = defaultImageSrc;
 }
 
-loadDefaultImage(); // Load default image automatically
-
+loadDefaultImage(); 
 img.onload = () => {
     drawImage();
     setupPuzzle();
@@ -41,18 +40,18 @@ function drawImage() {
     const tempCanvas = document.createElement('canvas');
     const tempCtx = tempCanvas.getContext('2d');
     
-    // Set the desired width and height for the resized image
-    const resizedWidth = 500; // Change this value to your desired width
-    const resizedHeight = 500; // Change this value to your desired height
     
-    // Set the size of the temporary canvas to match the resized image
+    const resizedWidth = 500; 
+    const resizedHeight = 500; 
+    
+    
     tempCanvas.width = resizedWidth;
     tempCanvas.height = resizedHeight;
     
-    // Draw the image onto the temporary canvas with resizing
+    
     tempCtx.drawImage(img, 0, 0, img.width, img.height, 0, 0, resizedWidth, resizedHeight);
     
-    // Draw the resized image onto the main canvas
+    
     ctx.drawImage(tempCanvas, 0, 0, canvas.width, canvas.height);
 }
 
@@ -73,24 +72,24 @@ function setupPuzzle() {
 function drawPuzzle() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Set the desired width and height for the resized image
-    const resizedWidth = 500; // Change this value to your desired width
-    const resizedHeight = 500; // Change this value to your desired height
+    
+    const resizedWidth = 500; 
+    const resizedHeight = 500; 
 
-    // Create a temporary canvas for resizing the image
+   
     const tempCanvas = document.createElement('canvas');
     const tempCtx = tempCanvas.getContext('2d');
     tempCanvas.width = resizedWidth;
     tempCanvas.height = resizedHeight;
 
-    // Draw the full image onto the temporary canvas with resizing
+    
     tempCtx.drawImage(img, 0, 0, img.width, img.height, 0, 0, resizedWidth, resizedHeight);
 
-    // Calculate tile dimensions based on the resized image size
+    
     const tileWidth = resizedWidth / tileCount;
     const tileHeight = resizedHeight / tileCount;
 
-    // Draw puzzle tiles onto the main canvas
+    
     for (let i = 0; i < tileCount; i++) {
         for (let j = 0; j < tileCount; j++) {
             if (tiles[i][j]) {
