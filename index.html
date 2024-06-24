@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solve D(u)a Image</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/v7PLRkCqkuOuBKp1hlIhf1vJJfKX8Je7r6K3daT_rzaBeZPe5dSoTfjV9Ud5C1feTBo" type="image/x-icon">
+
+    <meta name="description" content="Solve D(u)a Image is a classic sliding puzzle game. You have to reassemble a picture each time by sliding the tiles.">
+    <meta name="keywords" content="image puzzle, image game, change image">
+    <meta name="author" content="Asim Kumar Hansda">
+
+    <meta property="og:title" content="Solve D(u)a Image">
+    <meta property="og:description" content="Solve D(u)a Image is a classic sliding puzzle game. You have to reassemble a picture each time by sliding the tiles.">
+    <meta property="og:image" content="https://play-lh.googleusercontent.com/v7PLRkCqkuOuBKp1hlIhf1vJJfKX8Je7r6K3daT_rzaBeZPe5dSoTfjV9Ud5C1feTBo">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solve D(u)a Image">
+    <meta name="twitter:description" content="Solve D(u)a Image is a classic sliding puzzle game. You have to reassemble a picture each time by sliding the tiles.">
+    <meta name="twitter:image" content="https://play-lh.googleusercontent.com/v7PLRkCqkuOuBKp1hlIhf1vJJfKX8Je7r6K3daT_rzaBeZPe5dSoTfjV9Ud5C1feTBo">
+</head>
+
+
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Solve D(u)a Image</h1>
+            <label for="upload" class="upload-label">change image</label>
+            <input type="file" id="upload" accept="image/*">
+        </div>
+        <div class="game">
+            <div id="stats">
+                <div class="stat">Moves: <span id="moveCount">0</span></div>
+                <div class="stat">Time: <span id="timer">0:00</span></div>
+            </div>
+            <canvas id="puzzle"></canvas>
+            <div class="solution">
+                <h2>Solution</h2>
+                <img id="solutionImage" src="default.jpg" alt="Solution">
+            </div>
+        </div>
+        <section id="lab_social_icon_footer">
+          <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+          <div class="icons" style="display: flex; justify-content: space-between; margin-top:15px;">
+              <a href="https://github.com/webasim"><i class="fab fa-github fa-2x social"></i></a>
+              <a href="https://www.linkedin.com/in/asim-kumar-hansda-7a5872251/"><i id="social-linkedin" class="fab fa-linkedin fa-2x social"></i></a>
+              <a href="https://twitter.com/asimkumarhansda"><i id="social-twitter" class="fab fa-twitter fa-2x social"></i></a>
+              <a href="https://www.instagram.com/asimkrhansda"><i id="social-insta" class="fab fa-instagram fa-2x social"></i></a>
+              <a href="https://wa.me/918101061561"><i class="fab fa-whatsapp fa-2x social"></i></a>
+              <a href="https://drive.google.com/drive/u/0/folders/1j8cFc8-FR2dbYLlkgN_dOb7Rt51fa4YE"><i class="fas fa-download fa-2x social"></i></a>
+          </div>   
+          <hr style="margin-bottom: 5px;">
+          <p style="margin-top:0px; text-align:center; font-family:'Times New Roman', Times, serif; color: black;">Don't forget to leave your feedbacks in the above mediums!</p>   
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
